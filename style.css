@@ -6,8 +6,10 @@
 }
 
 :root {
-    --primary-color: #DEDEF7;
-    --secondary-color:#3232ca;
+    --primary-color: #f0eca8;
+    --secondary-color:#37ca32;
+    --tertiary-color:#03033f;
+    --extra-color:#f1ea55;
 }
 
 body{
@@ -16,7 +18,7 @@ body{
     line-height: 1.5;
     background: #fff;
     overflow-x: hidden;
-
+    color:var(--tertiary-color) ;
 }
 /*Header*/
 .header{
@@ -52,6 +54,10 @@ nav a :hover{
     background-color: var(--secondary-color);
 }
 
+.header .nav-bar .image img{
+    height: auto;
+}
+
 .button {
     border: 1px solid lightgray;
     background: white;
@@ -70,12 +76,13 @@ nav a :hover{
     border-radius: 8px;
     margin:20px 0;
     cursor: pointer;
+    margin: 20px 0;
 }
 
 .button3 {
-    border: none;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    border:none;
+    background-color:var(--extra-color);
+    color: var(--tertiary-color);
     padding: 10px 30px;
     border-radius: 8px;
 }
@@ -90,12 +97,32 @@ select :hover {
     background-color: var(--primary-color);
 }
 
-/*section*/
-.section-1 {
-    display: grid;
-    padding: 20px;
+.section-1 a{
+    color: var(--tertiary-color);
+    font-size: 10px;
+    text-decoration: underline;
 }
 
+.capture img{
+    width: max-content;
+    height: max-content;
+    float: right;
+    margin-right: 70px;
+}
+
+/*section*/
+.section-1 , .section-2 , .section-3{
+    display: grid;
+    padding: 30px;
+    text-align: center;
+}
+
+.section-02 {
+    display: grid;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--primary-color);
+}
 
 .grid-display{
     display: grid;
@@ -103,13 +130,83 @@ select :hover {
     gap: 30px;
 }
 
+.grid-display .grid-01 img{
+    width: 100%;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.grid-display, li, p {
+    margin-top: 10px;
+}
+
+.work-grid-1 {
+    background-color: #f0d4d9;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
+.work-grid-2 {
+    background-color:#a7f7a7;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
+.work-grid-3 {
+    background-color:#d1e7ee;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
+.work-grid-4 {
+    background-color:lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
 .grid-1 {
     background-color: var(--primary-color);
     padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
+.grid-7 {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+
+.section-03 {
+    display: grid;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.section-04{
+    padding: 5% 10%;
+}
+
+.grid-6 img{
+    align-items: center;
+    width: 30%;
 }
 
 /*section3*/
-
 .container {
     padding: 20px;
 }
@@ -130,6 +227,7 @@ select :hover {
     color: var(--secondary-color);
     padding: 10px 30px;
     border-radius: 8px;
+    margin: 20px 0px;
 }
 
 .button4:hover {
@@ -158,6 +256,7 @@ select :hover {
 
 .section-4 {
     background-color: var(--primary-color);
+    text-align: justify;
 }
 
 /*section5*/
@@ -172,7 +271,7 @@ select :hover {
     padding-left: 70px;
 }
 .section-5 .container .grid-display-5 img{
-    max-height: 150px;
+    max-height: 200px;
     justify-content: center;
     padding: 0px 50px;
     cursor: pointer;
@@ -188,9 +287,14 @@ select :hover {
 input{
     padding: 5px;
     border: none;
-    border-bottom:1px solid #3232ca;
+    border-bottom:1px solid var(--secondary-color);
 }
 
+footer a{
+    color: var(--tertiary-color);
+    font-size: 10px;
+    text-decoration: underline;
+}
 /*login page*/
 .login{
     background-color: var(--secondary-color);
@@ -211,7 +315,7 @@ input{
     text-align: center;
     border-radius: 10px;
     margin:30px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
     width: 80%;
     max-width: 400px;
     min-width: 200px;
@@ -230,6 +334,32 @@ input{
 .container-login h2, p {
     padding: 10px 0px;
 }
+
+/*homepage*/
+.side-bar {
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.5;
+    width: 30%;
+    background-color: var(--tertiary-color);
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+.content{
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+}
+
+.password{
+    margin: 10px 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
 /*dropdown*/
 .dropdown-container i{
     position: relative;
@@ -241,7 +371,7 @@ input{
     position: absolute;
     background-color:var(--secondary-color);
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
     z-index: 1;
     border-radius: 5px;
     font-size: 14px;
@@ -302,6 +432,10 @@ input{
         display: flex;
     }
 
+    .capture img{
+        width: 100px;
+    }
+
     .grid-display{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -318,7 +452,7 @@ input{
         padding: 20px;
     }
     .section-5 .container .grid-display-5 img{
-        max-height: 70px;
+        max-height: 90px;
         justify-content: center;
         padding: 0px 20px;
         cursor: pointer;
