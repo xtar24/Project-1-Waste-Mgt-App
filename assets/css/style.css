@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #f0eca8;
-    --secondary-color:#37ca32;
+    --secondary-color:#399b34;
     --tertiary-color:#03033f;
     --extra-color:#f1ea55;
 }
@@ -20,42 +20,116 @@ body{
     overflow-x: hidden;
     color:var(--tertiary-color) ;
 }
-/*Header*/
-.header{
-    background-color: var(--primary-color);
-    padding: 30px 20px;
-    font-size: 20px;
-    height: fit-content;
+
+section{
+    padding-top: 70px;
+    text-align: justify;
 }
 
-.header img{
-   width: 70px;
-    height: 70px;
-    padding: 10px; 
+main{
+    padding-top: 50px;
 }
 
-.nav-bar{
-    display: flex;
-}
-
+/* Nav Bar*/
 nav {
-    padding: 10px 50px;
+    background: var(--primary-color);
+    height: 80px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    flex: 1;
-    float: right;
-}
-
-nav a{
-    color: var(--secondary-color);
-}
-
-nav a :hover{
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin-bottom: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    width: 60px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  
+  label i {
     background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  label.logo {
+    color: var(--tertiary-color);
+    font-size: 1.75rem !important;
+    line-height: 80px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+
+  .login {
+    display: none;
+  }
+  
+  nav ul li a {
+    color: var(--tertiary-color);
+    font-size: 0.75rem !important;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  a.active,
+  a:hover {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    transition: .5s;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  .sign-in-button{
+    margin-right: 10px;
+  }
+
+  /*Section 1*/
+section{
+    padding-top: 70px;
+    text-align: justify;
 }
 
-.header .nav-bar .image img{
-    height: auto;
+.grid-display-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 70px;
+}
+
+.grid-display-1 img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
 }
 
 .button {
@@ -227,7 +301,7 @@ select :hover {
     color: var(--secondary-color);
     padding: 10px 30px;
     border-radius: 8px;
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 
 .button4:hover {
@@ -320,6 +394,7 @@ footer a{
     max-width: 400px;
     min-width: 200px;
     cursor: pointer;
+    color: var(--tertiary-color);
 }
 
 .container-login input{
@@ -457,6 +532,11 @@ footer a{
         padding: 0px 20px;
         cursor: pointer;
     }
+    .grid-display-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
 };
 
 /*login page*/
@@ -471,3 +551,67 @@ footer a{
         width: 95%;
     }
 }
+
+
+/* Responsive Navbar*/
+
+@media (max-width: 952px) {
+    .sign-in-button {
+        display: none;
+    }
+    label.logo {
+      font-size: 30px;
+    }
+
+    .login{
+        display: block;
+    }
+  
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+
+    .sign-in-button {
+        display: none;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+      color: #fff;
+    }
+  
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked~ul {
+      left: 0;
+    }
+  }
+  
+  
