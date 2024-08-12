@@ -1,67 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Account</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body style="display: flex; box-sizing: border-box;">
-        <div class="side-bar">
-            <header>
-                <div class="logo">
-                    <img src="/assets/images/waste.png" alt="">
-                    <h1>Clean-Out</h1>
-                </div>
-            </header>
-            <div class="account">
-                <p>Name</p>
-                <p>name@gmail.com</p>
-            </div>
-
-                <ul>
-                    <li>Dashboard</li>
-                </ul>
-                <p>Recycling</p>
-                <ul>
-                    <li>Request Pickup</li>
-                    <li>Recycled List</li>
-                    <li>Drop-off hubs</li>
-                </ul>
-                <p>Clean-Out Shop</p>
-                <ul>
-                    <li>Go to Shop</li>
-                    <li>Orders</li>
-                </ul>
-                <p>Wallet</p>
-                <ul>
-                    <li>History</li>
-                    <li>Transfer Points</li>
-                    <li>Withdraw Cash</li>
-                </ul>
-                <p>Settings</p>
-                <p>Log out name</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean-Out</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="display: flex; box-sizing: border-box; position: relative;">
+    <div class="side-bar">
+      <header>
+        <div id="clean">
+          <img style="width: 20%;" src="/assets/images/waste.png" alt="" />
+          <h1>Clean-Out</h1>
         </div>
-        <section class="content">
-                <input type="text" placeholder="Search">
-                <div class="password">
-                    <p>Profile</p>
-                    <label for=""></label>
-                    <input type="password" placeholder="Enter password">
-                </div>
-                <div class="password">
-                    <h4>Change password</h4>
-                    <form action="form">
-                        <label for="">Old Password</label>
-                        <input type="password" placeholder="Enter password"><br>
-                        <label for="">New Password</label>
-                        <input type="password" placeholder="Enter password"><br>
-                        <label for="">New Password Repeat</label>
-                        <input type="password" placeholder="Enter password"><br>
-                        <button class="button2">Save Changes</button>
-                    </form>
-                    <p style="font-size: 12px;">2024 Clean-Out- <a href="index.html">Waste Free Living</a></p>
-                </div>
-        </section>
-</body>
+      </header>
+      <div id="password-2">
+        <i class="fa-regular fa-user" style="font-size: 30px;"></i>
+        <p style="color:#399b34 ;">Name</p>
+        <p>name@gmail.com</p>
+      </div>
+
+      <ul>
+        <li><i class="fa-regular fa-address-card"></i><a href="#">Dashboard</a></li>
+      </ul>
+      <p>Recycling</p>
+      <ul>
+        <li><i class="fa-solid fa-truck-pickup"></i><a href="#">Request Pickup</a></li>
+        <li><i class="fa-solid fa-recycle"></i><a href="#">Recycled List</a></li>
+        <li><i class="fa-brands fa-hubspot"></i><a href="#">Drop-off hubs</a></li>
+      </ul>
+      <p>Clean-Out Shop</p>
+      <ul>
+        <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Go to Shop</a></li>
+        <li><i class="fa-sharp fa-solid fa-sort"></i><a href="#">Orders</a></li>
+      </ul>
+      <p>Wallet</p>
+      <ul>
+        <li><i class="fa-solid fa-rectangle-history-circle-user"></i><a href="#">History</a></li>
+        <li><i class="fa-solid fa-money-bill-transfer"></i><a href="#">Transfer Points</a></li>
+        <li><i class="fa-solid fa-money-bill"></i><a href="#">Withdraw</a></li>
+      </ul>
+      <p><i class="fa-sharp-duotone fa-solid fa-gear"></i>Settings</p>
+      <p> <i class="fa-solid fa-right-from-bracket"></i>Log out name</p>
+    </div>
+
+    <section class="content">
+        <div class="t">
+            <input type="checkbox" id="toggle">
+                <label for="toggle" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </label>
+            <button class="Password-button">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+            <a href="/assets/pages/index.html"><i class="fa-solid fa-house"></i>Home</a>
+        </div>
+        <div class="grid-display-3">
+            <div id="password-1">
+            <button class="Profile-button">
+                <i class="fa-solid fa-user"></i> Profile
+            </button>
+            <button class="Password-button">
+                <i class="fa-solid fa-lock"></i> Password
+            </button>
+            </div>
+            <div class="user-1">
+                <i class="fa-regular fa-user" style="font-size: 50px;"></i>
+                <h4>Name</h4>
+                <form>
+                    <input type="file" class="file-upload" />
+                </form>
+                <p style="font-size: 12px">
+                    For best results, use an image at least 256px by 256px in either
+                    .jpg or .png format
+                </p>
+            </div>
+        </div>
+        <div class="password" style="text-align: left; padding: 20px;">
+            <h3 style="margin-bottom: 20px;">Basic Information</h3>
+            <form action="basic information">
+                <label for="name">Name</label><br>
+                <input type="text" name="Name" id="Name" placeholder="Name"><br>
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <input type="radio" name="gender">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender">
+                        <label for="female">Female</label>
+                    </fieldset>
+                <label for="email">Email</label><br>
+                <input type="text" placeholder="Email">
+                <label for="DOB">Date of Birth</label><br>
+                <input type="date" placeholder=" Day">
+            </form>
+        </div>
+        <div class="password" style="text-align: left; padding: 20px;">
+            <h3 style="margin-bottom: 20px;">Contact</h3>
+            <form action="basic information">
+                <label for="name">Street</label><br>
+                <input type="text" name="Name" id="Name" placeholder="Street/House Address"><br>
+                    <label for="country">State</label>
+                    <select name="country" id="">
+                        <option value="Abia">Abia</option>
+                        <option value="Adamawa">Adamawa</option>
+                        <option value="Akwa-Ibom">Akwa-Ibom</option>
+                        <option value="Anambra">Anambra</option>
+                        <option value="Bauchi">Bauchi</option>
+                        <option value="Bayelsa">Bayelsa</option>
+                        <option value="Benue">Benue</option>
+                        <option value="Borno">Borno</option>
+                        <option value="Cross River">Cross River</option>
+                        <option value="Delta">Delta</option>
+                        <option value="Eboyi">Eboyi</option>
+                        <option value="Edo">Edo</option>
+                        <option value="Enugu">Enugu</option>
+                        <option value="Gombe">Gombe</option>
+                        <option value="Imo">Imo</option>
+                        <option value="jigawa">jigawa</option>
+                        <option value="Kaduna">Kaduna</option>
+                        <option value="Kastina">Kastina</option>
+                        <option value="Kebbi">Kebbi</option>
+                        <option value="Kogi">Kogi</option>
+                        <option value="Kano">Kano</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Ondo">Ondo</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Ogun">Ogun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="Plateau">Plateau</option>
+                        <option value="Rivers">Rivers</option>
+                        <option value="Sokoto">Sokoto</option>
+                        <option value="Taraba">Taraba</option>
+                        <option value="Yobe">Yobe</option>
+                        <option value="Zamfara">Zamfara</option>
+                        <option value="FCT Abuja">FCT Abuja</option>
+                    </select>
+                <label for="number">Phone</label><br>
+                <input type="number" placeholder="Phone Number">
+                <label for="number">City</label><br>
+                <input type="text" placeholder="City">
+                <label for="country">Country</label>
+                    <select name="country" id="">
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="South Africa">South africa</option>
+                        <option value="Togo">Togo</option>
+                    </select>
+                <label for="Landmark">Landmark</label><br>
+                <input type="text" placeholder="Landmark">
+            </form>
+        </div>
+        <div class="password" style="text-align: left; padding: 20px;">
+            <h3 style="margin-bottom: 20px;">Social</h3>
+            <form action="basic information">
+                <label for="Twitter">Twitter</label><br>
+                <input type="text" name="Name" id="Name" placeholder="@ ...."><br>
+                <label for="Instagram">Instagram</label><br>
+                <input type="text" placeholder="@ ....">
+                <label for="text">How do you hear about us?</label><br>
+                <input type="text" placeholder="@ ....">
+            </form>
+        </div>
+        <button class="button2">Save Changes</button>
+        <p style="font-size: 12px">
+          2024 Clean-Out- <a href="index.html">Waste Free Living</a>
+        </p>
+      <!--<div class="password">
+        <h4>Change password</h4>
+        <div>
+        <form action="form">
+          <label for="">Old Password</label>
+          <input type="password" placeholder="Enter password" /><br />
+          <label for="">New Password</label>
+          <input type="password" placeholder="Enter password" /><br />
+          <label for="">New Password Repeat</label>
+          <input type="password" placeholder="Enter password" /><br />
+          <button class="button2">Save Changes</button>
+        </form>
+        <p style="font-size: 12px">
+          2024 Clean-Out- <a href="index.html">Waste Free Living</a>
+        </p>-->
+        
+      </div>
+    </section>
+  </body>
 </html>

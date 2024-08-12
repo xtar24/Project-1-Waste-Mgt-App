@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-weight: lighter;
 }
 
 :root {
@@ -14,8 +15,8 @@
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.2;
     background: #fff;
     overflow-x: hidden;
     color:var(--tertiary-color) ;
@@ -51,7 +52,19 @@ nav {
     width: 60px;
     height: 50px;
     margin-left: 10px;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
   
   label i {
     background-color: var(--secondary-color);
@@ -132,6 +145,23 @@ section{
     cursor: pointer;
 }
 
+.capture {
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 200px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 .button {
     border: 1px solid lightgray;
     background: white;
@@ -173,7 +203,7 @@ select :hover {
 
 .section-1 a{
     color: var(--tertiary-color);
-    font-size: 10px;
+    font-size: 14px;
     text-decoration: underline;
 }
 
@@ -218,7 +248,7 @@ select :hover {
     background-color: #f0d4d9;
     padding: 10px;
     border-radius: 10px;
-    height: 150px;
+    height: 180px;
     text-align: center;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
 }
@@ -227,7 +257,7 @@ select :hover {
     background-color:#a7f7a7;
     padding: 10px;
     border-radius: 10px;
-    height: 150px;
+    height: 180px;
     text-align: center;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
 }
@@ -236,7 +266,7 @@ select :hover {
     background-color:#d1e7ee;
     padding: 10px;
     border-radius: 10px;
-    height: 150px;
+    height: 180px;
     text-align: center;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
 }
@@ -245,7 +275,7 @@ select :hover {
     background-color:lightgrey;
     padding: 10px;
     border-radius: 10px;
-    height: 150px;
+    height: 180px;
     text-align: center;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
 }
@@ -255,6 +285,10 @@ select :hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+}
+.grid-1 p{
+
+    color: var(--secondary-color);
 }
 
 .grid-7 {
@@ -277,7 +311,7 @@ select :hover {
 
 .grid-6 img{
     align-items: center;
-    width: 30%;
+    width: 40%;
 }
 
 /*section3*/
@@ -358,15 +392,15 @@ select :hover {
     padding: 10px;
 }
 
-input{
+footer input{
     padding: 5px;
     border: none;
     border-bottom:1px solid var(--secondary-color);
 }
 
 footer a{
-    color: var(--tertiary-color);
-    font-size: 10px;
+    color: var(--secondary-color);
+    font-size: 16px;
     text-decoration: underline;
 }
 /*login page*/
@@ -375,6 +409,13 @@ footer a{
     box-sizing: border-box;
     text-align: center;
     line-height: 1.5;
+}
+
+.logo {
+    padding: 10px 400px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
 
 .logo img{
@@ -388,13 +429,14 @@ footer a{
     background-color: #fff;
     text-align: center;
     border-radius: 10px;
-    margin:30px auto;
+    margin:5px auto;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
     width: 80%;
     max-width: 400px;
     min-width: 200px;
     cursor: pointer;
     color: var(--tertiary-color);
+    font-size: 14px;
 }
 
 .container-login input{
@@ -413,26 +455,119 @@ footer a{
 /*homepage*/
 .side-bar {
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     line-height: 1.5;
     width: 30%;
-    background-color: var(--tertiary-color);
+    background-color:#03033f31;
     box-sizing: border-box;
     align-items: center;
-    padding: 20px;
-    color: var(--primary-color);
+    padding: 10px;
+    color: var(--tertiary-color);
     font-size: 14px;
 }
+
+.hamburger{
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked + .hamburger + .side-bar{
+    display: flex;
+    position: absolute;
+    padding: 10px;
+}
+
+ul li{
+    list-style: none;
+}
+
 .content{
-    background-color: lightgray;
+    background-color: #ececec;
     width: 100%;
     text-align: center;
+    font-size: 14px;
+    padding: 10px;
 }
 
 .password{
     margin: 10px 50px;
-    background-color: white;
+    background-color: #ffffff79;
     border-radius: 10px;
+    width:50%;
+}
+
+#password-1{
+    margin: 10px 50px;
+    background-color: #ffffff79;
+    border-radius: 10px;
+}
+
+#password-2{
+    background-color: #ffffff79;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+.user-1 {
+    margin: 10px 50px;
+}
+
+.Profile-button{
+    padding: 10px;
+    background-color: #dda0b270;
+    border: none;
+    width: 70%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.Password-button{
+    padding: 10px;
+    background-color:white;
+    border: none;
+    width: 70%;
+    margin:0px 20px;
+    border-radius: 10px;
+}
+
+.file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: lightgray;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input, select{
+    border: 1px solid rgba(128, 128, 128, 0.61);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    margin: 10px;
+    background-color: rgba(248, 248, 255, 0.315);
+}
+
+i{
+    padding:0px 10px;
+    font-size: 16px;
+}
+fieldset {
+    width: 200px;
+    text-align: left;
+    padding: 20px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*dropdown*/
@@ -507,6 +642,24 @@ footer a{
         display: flex;
     }
 
+    #toggle:checked + .hamburger + .side-bar{
+    display: flex;
+}
+
+    .side-bar{
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .t{
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
     .capture img{
         width: 100px;
     }
@@ -570,6 +723,12 @@ footer a{
     nav ul li a {
       font-size: 16px;
     }
+    .logo {
+    padding: 10px 50px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
   }
   
   @media (max-width: 858px) {
