@@ -62,7 +62,7 @@ nav {
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(90deg);
     }
 }
   
@@ -155,7 +155,7 @@ section{
         left: 0;
     }
     50% {
-        left: 200px;
+        left: 50px;
     }
     100% {
         left: 0;
@@ -296,8 +296,21 @@ select :hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.322);
+    position: relative;
+    animation: pulse 4s infinite;
 }
 
+@keyframes pulse {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 50px;
+    }
+    100% {
+        left: 0;
+    }
+}
 .section-03 {
     display: grid;
     margin: auto;
@@ -409,13 +422,6 @@ footer a{
     box-sizing: border-box;
     text-align: center;
     line-height: 1.5;
-}
-
-.logo {
-    padding: 10px 400px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
 }
 
 .logo img{
@@ -723,12 +729,6 @@ fieldset {
     nav ul li a {
       font-size: 16px;
     }
-    .logo {
-    padding: 10px 50px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
   }
   
   @media (max-width: 858px) {
